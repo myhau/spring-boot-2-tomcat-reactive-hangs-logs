@@ -1,0 +1,520 @@
+GET /search-indexer-api/v1/actuator/indices/all HTTP/1.1
+user-agent: ReactorNetty/0.7.6.RELEASE
+host: localhost:48081
+accept: */*
+accept-encoding: gzip
+WebTestClient-Request-Id: 48
+16:04:49.441 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] WRITE: 189B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 47 45 54 20 2f 73 65 61 72 63 68 2d 69 6e 64 65 |GET /search-inde|
+|00000010| 78 65 72 2d 61 70 69 2f 76 31 2f 61 63 74 75 61 |xer-api/v1/actua|
+|00000020| 74 6f 72 2f 69 6e 64 69 63 65 73 2f 61 6c 6c 20 |tor/indices/all |
+|00000030| 48 54 54 50 2f 31 2e 31 0d 0a 75 73 65 72 2d 61 |HTTP/1.1..user-a|
+|00000040| 67 65 6e 74 3a 20 52 65 61 63 74 6f 72 4e 65 74 |gent: ReactorNet|
+|00000050| 74 79 2f 30 2e 37 2e 36 2e 52 45 4c 45 41 53 45 |ty/0.7.6.RELEASE|
+|00000060| 0d 0a 68 6f 73 74 3a 20 6c 6f 63 61 6c 68 6f 73 |..host: localhos|
+|00000070| 74 3a 34 38 30 38 31 0d 0a 61 63 63 65 70 74 3a |t:48081..accept:|
+|00000080| 20 2a 2f 2a 0d 0a 61 63 63 65 70 74 2d 65 6e 63 | */*..accept-enc|
+|00000090| 6f 64 69 6e 67 3a 20 67 7a 69 70 0d 0a 57 65 62 |oding: gzip..Web|
+|000000a0| 54 65 73 74 43 6c 69 65 6e 74 2d 52 65 71 75 65 |TestClient-Reque|
+|000000b0| 73 74 2d 49 64 3a 20 34 38 0d 0a 0d 0a          |st-Id: 48....   |
++--------+-------------------------------------------------+----------------+
+16:04:49.442 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] FLUSH
+16:04:49.444 [o-auto-3-exec-5] DEBUG 18873 --- o.s.w.r.DispatcherHandler                : Processing GET request for [http://localhost:48081/search-indexer-api/v1/actuator/indices/all]
+16:04:49.446 [o-auto-3-exec-5] TRACE 18873 --- o.s.w.r.r.m.InvocableHandlerMethod       : Invoking 'org.springframework.boot.actuate.endpoint.web.reactive.AbstractWebFluxEndpointHandlerMapping$ReadOperationHandler.handle' with arguments [org.springframework.web.server.adapter.DefaultServerWebExchange@43804e64]
+16:04:49.446 [o-auto-3-exec-5] TRACE 18873 --- o.s.w.r.r.m.InvocableHandlerMethod       : Method [org.springframework.boot.actuate.endpoint.web.reactive.AbstractWebFluxEndpointHandlerMapping$ReadOperationHandler.handle] returned [MonoFlatMap]
+16:04:49.447 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Writing object EmptyLastHttpContent
+16:04:49.452 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] WRITE: 0B
+16:04:49.454 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] FLUSH
+16:04:49.452 [o-auto-3-exec-5] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Subscriber present
+16:04:49.458 [o-auto-3-exec-5] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Demand signaled
+16:04:49.459 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Acquired [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479], now 1 active connections
+16:04:49.460 [o-auto-3-exec-5] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquiring existing channel from pool: DefaultPromise@15a5af94(success: [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479]) SimpleChannelPool{activeConnections=1}
+16:04:49.461 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquired active channel: [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479]
+16:04:49.461 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperations                : [HttpClient] [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] handler is being applied: HttpClientHandler{startURI=http://localhost:46479/_cat/indices, method=GET, handler=reactor.ipc.netty.http.client.HttpClient$$Lambda$658/1880901678@5db13046}
+16:04:49.462 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Writing object DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+GET /_cat/indices HTTP/1.1
+user-agent: ReactorNetty/0.7.6.RELEASE
+host: localhost:46479
+accept-encoding: gzip
+Accept: application/json
+Content-Type: application/json
+16:04:49.462 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] WRITE: 174B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 47 45 54 20 2f 5f 63 61 74 2f 69 6e 64 69 63 65 |GET /_cat/indice|
+|00000010| 73 20 48 54 54 50 2f 31 2e 31 0d 0a 75 73 65 72 |s HTTP/1.1..user|
+|00000020| 2d 61 67 65 6e 74 3a 20 52 65 61 63 74 6f 72 4e |-agent: ReactorN|
+|00000030| 65 74 74 79 2f 30 2e 37 2e 36 2e 52 45 4c 45 41 |etty/0.7.6.RELEA|
+|00000040| 53 45 0d 0a 68 6f 73 74 3a 20 6c 6f 63 61 6c 68 |SE..host: localh|
+|00000050| 6f 73 74 3a 34 36 34 37 39 0d 0a 61 63 63 65 70 |ost:46479..accep|
+|00000060| 74 2d 65 6e 63 6f 64 69 6e 67 3a 20 67 7a 69 70 |t-encoding: gzip|
+|00000070| 0d 0a 41 63 63 65 70 74 3a 20 61 70 70 6c 69 63 |..Accept: applic|
+|00000080| 61 74 69 6f 6e 2f 6a 73 6f 6e 0d 0a 43 6f 6e 74 |ation/json..Cont|
+|00000090| 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 |ent-Type: applic|
+|000000a0| 61 74 69 6f 6e 2f 6a 73 6f 6e 0d 0a 0d 0a       |ation/json....  |
++--------+-------------------------------------------------+----------------+
+16:04:49.462 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] FLUSH
+16:04:49.463 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Writing object EmptyLastHttpContent
+16:04:49.463 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] WRITE: 0B
+16:04:49.463 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] FLUSH
+16:04:49.471 [p1567791862-130]  INFO 18873 --- WireMock                                 : Request received:
+127.0.0.1 - GET /_cat/indices
+
+User-Agent: [ReactorNetty/0.7.6.RELEASE]
+Host: [localhost:46479]
+Accept-Encoding: [gzip]
+Accept: [application/json]
+Content-Type: [application/json]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "[{\"health\":\"OK_index_1-2.0.0-us-1515639600030\",\"index\":\"index_1-2.0.0-us-1515639600030\",\"pri\":\"pri_index_1-2.0.0-us-1515639600030\",\"rep\":\"rep_index_1-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_1-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_1-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_1-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_1-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_1-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_2-2.0.0-us-1515639600030\",\"index\":\"index_2-2.0.0-us-1515639600030\",\"pri\":\"pri_index_2-2.0.0-us-1515639600030\",\"rep\":\"rep_index_2-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_2-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_2-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_2-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_2-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_2-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515639600030\",\"index\":\"index_3-2.0.0-us-1515639600030\",\"pri\":\"pri_index_3-2.0.0-us-1515639600030\",\"rep\":\"rep_index_3-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515645600030\",\"index\":\"index_3-2.0.0-us-1515645600030\",\"pri\":\"pri_index_3-2.0.0-us-1515645600030\",\"rep\":\"rep_index_3-2.0.0-us-1515645600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515645600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515645600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515645600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515645600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515645600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515712600030\",\"index\":\"index_3-2.0.0-us-1515712600030\",\"pri\":\"pri_index_3-2.0.0-us-1515712600030\",\"rep\":\"rep_index_3-2.0.0-us-1515712600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515712600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515712600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515712600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515712600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515712600030\"},{\"health\":\"OK_users-2.0.0-us-1485639600330\",\"index\":\"users-2.0.0-us-1485639600330\",\"pri\":\"pri_users-2.0.0-us-1485639600330\",\"rep\":\"rep_users-2.0.0-us-1485639600330\",\"docs.count\":\"docsCount_users-2.0.0-us-1485639600330\",\"docs.deleted\":\"deleted_users-2.0.0-us-1485639600330\",\"store.size\":\"storeSize_users-2.0.0-us-1485639600330\",\"pri.store.size\":\"priStoreSize_users-2.0.0-us-1485639600330\",\"someProp\":\"someProp_users-2.0.0-us-1485639600330\"},{\"health\":\"OK_properties-2.0.0-us-1453639800090\",\"index\":\"properties-2.0.0-us-1453639800090\",\"pri\":\"pri_properties-2.0.0-us-1453639800090\",\"rep\":\"rep_properties-2.0.0-us-1453639800090\",\"docs.count\":\"docsCount_properties-2.0.0-us-1453639800090\",\"docs.deleted\":\"deleted_properties-2.0.0-us-1453639800090\",\"store.size\":\"storeSize_properties-2.0.0-us-1453639800090\",\"pri.store.size\":\"priStoreSize_properties-2.0.0-us-1453639800090\",\"someProp\":\"someProp_properties-2.0.0-us-1453639800090\"}]",
+  "headers" : {
+    "Content-Type" : "application/json;charset=UTF-8"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json;charset=UTF-8]
+
+[{"health":"OK_index_1-2.0.0-us-1515639600030","index":"index_1-2.0.0-us-1515639600030","pri":"pri_index_1-2.0.0-us-1515639600030","rep":"rep_index_1-2.0.0-us-1515639600030","docs.count":"docsCount_index_1-2.0.0-us-1515639600030","docs.deleted":"deleted_index_1-2.0.0-us-1515639600030","store.size":"storeSize_index_1-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_1-2.0.0-us-1515639600030","someProp":"someProp_index_1-2.0.0-us-1515639600030"},{"health":"OK_index_2-2.0.0-us-1515639600030","index":"index_2-2.0.0-us-1515639600030","pri":"pri_index_2-2.0.0-us-1515639600030","rep":"rep_index_2-2.0.0-us-1515639600030","docs.count":"docsCount_index_2-2.0.0-us-1515639600030","docs.deleted":"deleted_index_2-2.0.0-us-1515639600030","store.size":"storeSize_index_2-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_2-2.0.0-us-1515639600030","someProp":"someProp_index_2-2.0.0-us-1515639600030"},{"health":"OK_index_3-2.0.0-us-1515639600030","index":"index_3-2.0.0-us-1515639600030","pri":"pri_index_3-2.0.0-us-1515639600030","rep":"rep_index_3-2.0.0-us-1515639600030","docs.count":"docsCount_index_3-2.0.0-us-1515639600030","docs.deleted":"deleted_index_3-2.0.0-us-1515639600030","store.size":"storeSize_index_3-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515639600030","someProp":"someProp_index_3-2.0.0-us-1515639600030"},{"health":"OK_index_3-2.0.0-us-1515645600030","index":"index_3-2.0.0-us-1515645600030","pri":"pri_index_3-2.0.0-us-1515645600030","rep":"rep_index_3-2.0.0-us-1515645600030","docs.count":"docsCount_index_3-2.0.0-us-1515645600030","docs.deleted":"deleted_index_3-2.0.0-us-1515645600030","store.size":"storeSize_index_3-2.0.0-us-1515645600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515645600030","someProp":"someProp_index_3-2.0.0-us-1515645600030"},{"health":"OK_index_3-2.0.0-us-1515712600030","index":"index_3-2.0.0-us-1515712600030","pri":"pri_index_3-2.0.0-us-1515712600030","rep":"rep_index_3-2.0.0-us-1515712600030","docs.count":"docsCount_index_3-2.0.0-us-1515712600030","docs.deleted":"deleted_index_3-2.0.0-us-1515712600030","store.size":"storeSize_index_3-2.0.0-us-1515712600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515712600030","someProp":"someProp_index_3-2.0.0-us-1515712600030"},{"health":"OK_users-2.0.0-us-1485639600330","index":"users-2.0.0-us-1485639600330","pri":"pri_users-2.0.0-us-1485639600330","rep":"rep_users-2.0.0-us-1485639600330","docs.count":"docsCount_users-2.0.0-us-1485639600330","docs.deleted":"deleted_users-2.0.0-us-1485639600330","store.size":"storeSize_users-2.0.0-us-1485639600330","pri.store.size":"priStoreSize_users-2.0.0-us-1485639600330","someProp":"someProp_users-2.0.0-us-1485639600330"},{"health":"OK_properties-2.0.0-us-1453639800090","index":"properties-2.0.0-us-1453639800090","pri":"pri_properties-2.0.0-us-1453639800090","rep":"rep_properties-2.0.0-us-1453639800090","docs.count":"docsCount_properties-2.0.0-us-1453639800090","docs.deleted":"deleted_properties-2.0.0-us-1453639800090","store.size":"storeSize_properties-2.0.0-us-1453639800090","pri.store.size":"priStoreSize_properties-2.0.0-us-1453639800090","someProp":"someProp_properties-2.0.0-us-1453639800090"}]
+
+16:04:49.475 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ: 188B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 48 54 54 50 2f 31 2e 31 20 32 30 30 20 4f 4b 0d |HTTP/1.1 200 OK.|
+|00000010| 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 |.Content-Type: a|
+|00000020| 70 70 6c 69 63 61 74 69 6f 6e 2f 6a 73 6f 6e 3b |pplication/json;|
+|00000030| 63 68 61 72 73 65 74 3d 55 54 46 2d 38 0d 0a 43 |charset=UTF-8..C|
+|00000040| 6f 6e 74 65 6e 74 2d 45 6e 63 6f 64 69 6e 67 3a |ontent-Encoding:|
+|00000050| 20 67 7a 69 70 0d 0a 56 61 72 79 3a 20 41 63 63 | gzip..Vary: Acc|
+|00000060| 65 70 74 2d 45 6e 63 6f 64 69 6e 67 2c 20 55 73 |ept-Encoding, Us|
+|00000070| 65 72 2d 41 67 65 6e 74 0d 0a 54 72 61 6e 73 66 |er-Agent..Transf|
+|00000080| 65 72 2d 45 6e 63 6f 64 69 6e 67 3a 20 63 68 75 |er-Encoding: chu|
+|00000090| 6e 6b 65 64 0d 0a 53 65 72 76 65 72 3a 20 4a 65 |nked..Server: Je|
+|000000a0| 74 74 79 28 39 2e 32 2e 32 32 2e 76 32 30 31 37 |tty(9.2.22.v2017|
+|000000b0| 30 36 30 36 29 0d 0a 0d 0a 41 0d 0a             |0606)....A..    |
++--------+-------------------------------------------------+----------------+
+16:04:49.476 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClientOperations           : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Received response (auto-read:false) : [Content-Type=application/json;charset=UTF-8, Vary=Accept-Encoding, User-Agent, Transfer-Encoding=chunked, Server=Jetty(9.2.22.v20170606)]
+16:04:49.476 [ctor-http-nio-4] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Response received, status: 200 OK
+16:04:49.478 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.FluxReceive                      : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+16:04:49.478 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ COMPLETE
+16:04:49.481 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ: 192B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 1f 8b 08 00 00 00 00 00 00 00 0d 0a 31 38 35 0d |............185.|
+|00000010| 0a 95 d3 4f 6b c2 40 10 87 e1 ef 92 b3 09 9b c4 |...Ok.@.........|
+|00000020| 58 ed b5 c7 1e 5a f0 58 8a 14 33 60 c0 ba 61 37 |X....Z.X..3`..a7|
+|00000030| 81 d2 e2 77 ef c4 fe c9 66 93 9d 99 bd 48 94 df |...w....f....H..|
+|00000040| eb b2 3e f8 f2 95 9c e0 ed dc 9d 92 fb e4 e9 f1 |..>.............|
+|00000050| d0 5c 6a f8 38 e4 69 91 a9 4c a5 bd 4d f3 2a af |.\j.8.i..L..M.*.|
+|00000060| 36 e5 6e a3 94 2a 55 b2 4a 6e 03 dc b2 c3 d6 34 |6.n..*U.Jn.....4|
+|00000070| 38 c3 57 fe 3b 0d b4 38 c5 57 7e 5a eb a3 cd 8e |8.W.;..8.W~Z....|
+|00000080| ba bf 74 58 0c 6f 1e 86 67 61 57 c3 19 3a a8 87 |..tX.o..gaW..:..|
+|00000090| f2 e7 89 ef 6c a7 0d 64 b6 f9 04 ac 6e 6f f6 f8 |....l..d....no..|
+|000000a0| cc 77 78 ef 6c d2 e2 07 7b 79 6e f5 3b 3c 1b 3d |.wx.l...{yn.;<.=|
+|000000b0| fc 2c 7f 8f 5c 74 5d 2d 49 16 52 49 62 e8 4b 12 |.,..\t]-I.RIb.K.|
++--------+-------------------------------------------------+----------------+
+16:04:49.484 [o-auto-3-exec-5] TRACE 18873 --- etServerHttpRequest$RequestBodyPublisher : I/O event onAllDataRead
+16:04:49.490 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ COMPLETE
+16:04:49.500 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ: 221B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 53 5f 92 98 92 92 5c 17 92 24 3a 52 92 be 3d 2b |S_....\..$:R..=+|
+|00000010| 49 1d 1b 94 0c 46 cb 92 a5 54 92 18 fa 92 c4 d4 |I....F...T......|
+|00000020| 97 24 a6 a4 24 d7 85 24 89 8e 94 a4 6f cf 4a 52 |.$..$..$....o.JR|
+|00000030| c7 06 25 83 91 4c 72 5d 09 25 9d 21 27 e9 4c 39 |..%..Lr].%.!'.L9|
+|00000040| 49 67 1a 25 e9 77 52 49 a7 8b 92 9c de 3e 5a d2 |Ig.%.wRI.....>Z.|
+|00000050| 3d 56 2c f9 1f 89 24 ef f2 42 26 e9 0e 19 49 77 |=V,...$..B&...Iw|
+|00000060| ca 48 ba d3 18 c9 59 27 94 74 bb 18 49 ef f6 b1 |.H....Y'.t..I...|
+|00000070| 92 93 63 a5 92 63 e4 4b f6 16 8c 75 c6 eb ed ef |..c..c.K...u....|
+|00000080| 1f b8 9c 38 32 b3 51 91 19 8e 86 cc 30 20 28 a9 |...82.Q.....0 (.|
+|00000090| e6 7e 4c 15 d0 e3 ef 4c d8 71 47 2e c8 91 89 ef |.~L....L.qG.....|
+|000000a0| d6 62 01 a6 6b 60 52 54 25 16 5b 94 de b9 78 92 |.b..k`RT%.[...x.|
+|000000b0| ed 28 28 59 8f 8c 92 75 c0 52 9c ce 41 25 69 40 |.((Y...u.R..A%i@|
+|000000c0| 55 f8 63 10 b4 a2 c3 17 7c f9 ee fa fa 0d 4d 87 |U.c.....|.....M.|
+|000000d0| 6b 38 90 0c 00 00 0d 0a 30 0d 0a 0d 0a          |k8......0....   |
++--------+-------------------------------------------------+----------------+
+16:04:49.523 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClientOperations           : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Received last HTTP packet
+16:04:49.531 [ctor-http-nio-4] TRACE 18873 --- r.i.n.c.ChannelOperations                : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Disposing ChannelOperation from a channel
+java.lang.Exception: ChannelOperation terminal stack
+	at reactor.ipc.netty.channel.ChannelOperations.onHandlerTerminate(ChannelOperations.java:417) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at reactor.ipc.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:597) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at reactor.ipc.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:134) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.logging.LoggingHandler.channelRead(LoggingHandler.java:241) [netty-handler-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.23.Final.jar:4.1.23.Final]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_101]
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : UNSUBSCRIBED -> REQUESTED
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : Received onNext publisher
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : REQUESTED -> RECEIVED
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : UNSUBSCRIBED -> REQUESTED
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : Received onNext data item
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : REQUESTED -> RECEIVED
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : isWritePossible[true]
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : Received onWritePossible
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : RECEIVED -> WRITING
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : write: DefaultDataBuffer (r: 0, w 3540, c 4096) ready: true
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : written: 3540 total: 3540
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : releaseData: DefaultDataBuffer (r: 0, w 3540, c 4096)
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : WRITING -> REQUESTED
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : UNSUBSCRIBED subscribe: org.springframework.http.server.reactive.AbstractListenerWriteFlushProcessor$State$WriteResultSubscriber@63ae9e6b
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : SUBSCRIBING request: 9223372036854775807
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : Received onComplete
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : UNSUBSCRIBED subscribe: reactor.core.publisher.MonoNext$NextSubscriber@2c9fc312
+16:04:49.600 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : SUBSCRIBING request: 9223372036854775807
+16:04:49.641 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : Received onComplete
+16:04:49.641 [ctor-http-nio-4] TRACE 18873 --- ServerHttpResponse$ResponseBodyProcessor : REQUESTED -> COMPLETED
+16:04:49.642 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : SUBSCRIBED publishComplete
+16:04:49.643 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : RECEIVED writeComplete
+16:04:49.643 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : flush
+16:04:49.645 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ: 1024B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 48 54 54 50 2f 31 2e 31 20 32 30 30 20 0d 0a 58 |HTTP/1.1 200 ..X|
+|00000010| 2d 54 72 61 63 65 2d 49 64 3a 20 66 35 30 62 35 |-Trace-Id: f50b5|
+|00000020| 32 35 63 63 65 37 37 65 33 30 62 0d 0a 43 6f 6e |25cce77e30b..Con|
+|00000030| 74 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 |tent-Type: appli|
+|00000040| 63 61 74 69 6f 6e 2f 6a 73 6f 6e 3b 63 68 61 72 |cation/json;char|
+|00000050| 73 65 74 3d 55 54 46 2d 38 0d 0a 54 72 61 6e 73 |set=UTF-8..Trans|
+|00000060| 66 65 72 2d 45 6e 63 6f 64 69 6e 67 3a 20 63 68 |fer-Encoding: ch|
+|00000070| 75 6e 6b 65 64 0d 0a 44 61 74 65 3a 20 46 72 69 |unked..Date: Fri|
+|00000080| 2c 20 31 33 20 41 70 72 20 32 30 31 38 20 31 36 |, 13 Apr 2018 16|
+|00000090| 3a 30 34 3a 34 39 20 47 4d 54 0d 0a 0d 0a 64 64 |:04:49 GMT....dd|
+|000000a0| 34 0d 0a 7b 22 69 6e 64 65 78 5f 33 2d 32 2e 30 |4..{"index_3-2.0|
+|000000b0| 2e 30 2d 75 73 2d 31 35 31 35 37 31 32 36 30 30 |.0-us-1515712600|
+|000000c0| 30 33 30 22 3a 7b 22 68 65 61 6c 74 68 22 3a 22 |030":{"health":"|
+|000000d0| 4f 4b 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 |OK_index_3-2.0.0|
+|000000e0| 2d 75 73 2d 31 35 31 35 37 31 32 36 30 30 30 33 |-us-151571260003|
+|000000f0| 30 22 2c 22 70 72 69 22 3a 22 70 72 69 5f 69 6e |0","pri":"pri_in|
+|00000100| 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 |dex_3-2.0.0-us-1|
+|00000110| 35 31 35 37 31 32 36 30 30 30 33 30 22 2c 22 72 |515712600030","r|
+|00000120| 65 70 22 3a 22 72 65 70 5f 69 6e 64 65 78 5f 33 |ep":"rep_index_3|
+|00000130| 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 37 31 |-2.0.0-us-151571|
+|00000140| 32 36 30 30 30 33 30 22 2c 22 64 6f 63 73 43 6f |2600030","docsCo|
+|00000150| 75 6e 74 22 3a 22 64 6f 63 73 43 6f 75 6e 74 5f |unt":"docsCount_|
+|00000160| 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 |index_3-2.0.0-us|
+|00000170| 2d 31 35 31 35 37 31 32 36 30 30 30 33 30 22 2c |-1515712600030",|
+|00000180| 22 64 6f 63 73 44 65 6c 65 74 65 64 22 3a 22 64 |"docsDeleted":"d|
+|00000190| 65 6c 65 74 65 64 5f 69 6e 64 65 78 5f 33 2d 32 |eleted_index_3-2|
+|000001a0| 2e 30 2e 30 2d 75 73 2d 31 35 31 35 37 31 32 36 |.0.0-us-15157126|
+|000001b0| 30 30 30 33 30 22 2c 22 73 74 6f 72 65 53 69 7a |00030","storeSiz|
+|000001c0| 65 22 3a 22 73 74 6f 72 65 53 69 7a 65 5f 69 6e |e":"storeSize_in|
+|000001d0| 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 |dex_3-2.0.0-us-1|
+|000001e0| 35 31 35 37 31 32 36 30 30 30 33 30 22 2c 22 70 |515712600030","p|
+|000001f0| 72 69 53 74 6f 72 65 53 69 7a 65 22 3a 22 70 72 |riStoreSize":"pr|
+|00000200| 69 53 74 6f 72 65 53 69 7a 65 5f 69 6e 64 65 78 |iStoreSize_index|
+|00000210| 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 |_3-2.0.0-us-1515|
+|00000220| 37 31 32 36 30 30 30 33 30 22 2c 22 63 72 65 61 |712600030","crea|
+|00000230| 74 69 6f 6e 44 61 74 65 22 3a 22 32 30 31 38 2d |tionDate":"2018-|
+|00000240| 30 31 2d 31 31 54 32 33 3a 31 36 3a 34 30 2e 30 |01-11T23:16:40.0|
+|00000250| 33 22 2c 22 61 67 65 22 3a 22 31 39 38 33 3a 34 |3","age":"1983:4|
+|00000260| 33 3a 31 39 22 2c 22 73 6f 6d 65 50 72 6f 70 22 |3:19","someProp"|
+|00000270| 3a 22 73 6f 6d 65 50 72 6f 70 5f 69 6e 64 65 78 |:"someProp_index|
+|00000280| 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 |_3-2.0.0-us-1515|
+|00000290| 37 31 32 36 30 30 30 33 30 22 7d 2c 22 69 6e 64 |712600030"},"ind|
+|000002a0| 65 78 5f 31 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 |ex_1-2.0.0-us-15|
+|000002b0| 31 35 36 33 39 36 30 30 30 33 30 22 3a 7b 22 68 |15639600030":{"h|
+|000002c0| 65 61 6c 74 68 22 3a 22 4f 4b 5f 69 6e 64 65 78 |ealth":"OK_index|
+|000002d0| 5f 31 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 |_1-2.0.0-us-1515|
+|000002e0| 36 33 39 36 30 30 30 33 30 22 2c 22 70 72 69 22 |639600030","pri"|
+|000002f0| 3a 22 70 72 69 5f 69 6e 64 65 78 5f 31 2d 32 2e |:"pri_index_1-2.|
+|00000300| 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 |0.0-us-151563960|
+|00000310| 30 30 33 30 22 2c 22 72 65 70 22 3a 22 72 65 70 |0030","rep":"rep|
+|00000320| 5f 69 6e 64 65 78 5f 31 2d 32 2e 30 2e 30 2d 75 |_index_1-2.0.0-u|
+|00000330| 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 30 22 |s-1515639600030"|
+|00000340| 2c 22 64 6f 63 73 43 6f 75 6e 74 22 3a 22 64 6f |,"docsCount":"do|
+|00000350| 63 73 43 6f 75 6e 74 5f 69 6e 64 65 78 5f 31 2d |csCount_index_1-|
+|00000360| 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 |2.0.0-us-1515639|
+|00000370| 36 30 30 30 33 30 22 2c 22 64 6f 63 73 44 65 6c |600030","docsDel|
+|00000380| 65 74 65 64 22 3a 22 64 65 6c 65 74 65 64 5f 69 |eted":"deleted_i|
+|00000390| 6e 64 65 78 5f 31 2d 32 2e 30 2e 30 2d 75 73 2d |ndex_1-2.0.0-us-|
+|000003a0| 31 35 31 35 36 33 39 36 30 30 30 33 30 22 2c 22 |1515639600030","|
+|000003b0| 73 74 6f 72 65 53 69 7a 65 22 3a 22 73 74 6f 72 |storeSize":"stor|
+|000003c0| 65 53 69 7a 65 5f 69 6e 64 65 78 5f 31 2d 32 2e |eSize_index_1-2.|
+|000003d0| 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 |0.0-us-151563960|
+|000003e0| 30 30 33 30 22 2c 22 70 72 69 53 74 6f 72 65 53 |0030","priStoreS|
+|000003f0| 69 7a 65 22 3a 22 70 72 69 53 74 6f 72 65 53 69 |ize":"priStoreSi|
++--------+-------------------------------------------------+----------------+
+16:04:49.646 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClientOperations           : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Received response (auto-read:false) : [X-Trace-Id=f50b525cce77e30b, Content-Type=application/json;charset=UTF-8, Transfer-Encoding=chunked, Date=Fri, 13 Apr 2018 16:04:49 GMT]
+16:04:49.646 [ctor-http-nio-1] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Response received, status: 200 OK
+16:04:49.646 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ COMPLETE
+16:04:49.646 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ: 2681B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 7a 65 5f 69 6e 64 65 78 5f 31 2d 32 2e 30 2e 30 |ze_index_1-2.0.0|
+|00000010| 2d 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 |-us-151563960003|
+|00000020| 30 22 2c 22 63 72 65 61 74 69 6f 6e 44 61 74 65 |0","creationDate|
+|00000030| 22 3a 22 32 30 31 38 2d 30 31 2d 31 31 54 30 33 |":"2018-01-11T03|
+|00000040| 3a 30 30 3a 30 30 2e 30 33 22 2c 22 61 67 65 22 |:00:00.03","age"|
+|00000050| 3a 22 32 30 30 33 3a 35 39 3a 35 39 22 2c 22 73 |:"2003:59:59","s|
+|00000060| 6f 6d 65 50 72 6f 70 22 3a 22 73 6f 6d 65 50 72 |omeProp":"somePr|
+|00000070| 6f 70 5f 69 6e 64 65 78 5f 31 2d 32 2e 30 2e 30 |op_index_1-2.0.0|
+|00000080| 2d 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 |-us-151563960003|
+|00000090| 30 22 7d 2c 22 75 73 65 72 73 2d 32 2e 30 2e 30 |0"},"users-2.0.0|
+|000000a0| 2d 75 73 2d 31 34 38 35 36 33 39 36 30 30 33 33 |-us-148563960033|
+|000000b0| 30 22 3a 7b 22 68 65 61 6c 74 68 22 3a 22 4f 4b |0":{"health":"OK|
+|000000c0| 5f 75 73 65 72 73 2d 32 2e 30 2e 30 2d 75 73 2d |_users-2.0.0-us-|
+|000000d0| 31 34 38 35 36 33 39 36 30 30 33 33 30 22 2c 22 |1485639600330","|
+|000000e0| 70 72 69 22 3a 22 70 72 69 5f 75 73 65 72 73 2d |pri":"pri_users-|
+|000000f0| 32 2e 30 2e 30 2d 75 73 2d 31 34 38 35 36 33 39 |2.0.0-us-1485639|
+|00000100| 36 30 30 33 33 30 22 2c 22 72 65 70 22 3a 22 72 |600330","rep":"r|
+|00000110| 65 70 5f 75 73 65 72 73 2d 32 2e 30 2e 30 2d 75 |ep_users-2.0.0-u|
+|00000120| 73 2d 31 34 38 35 36 33 39 36 30 30 33 33 30 22 |s-1485639600330"|
+|00000130| 2c 22 64 6f 63 73 43 6f 75 6e 74 22 3a 22 64 6f |,"docsCount":"do|
+|00000140| 63 73 43 6f 75 6e 74 5f 75 73 65 72 73 2d 32 2e |csCount_users-2.|
+|00000150| 30 2e 30 2d 75 73 2d 31 34 38 35 36 33 39 36 30 |0.0-us-148563960|
+|00000160| 30 33 33 30 22 2c 22 64 6f 63 73 44 65 6c 65 74 |0330","docsDelet|
+|00000170| 65 64 22 3a 22 64 65 6c 65 74 65 64 5f 75 73 65 |ed":"deleted_use|
+|00000180| 72 73 2d 32 2e 30 2e 30 2d 75 73 2d 31 34 38 35 |rs-2.0.0-us-1485|
+|00000190| 36 33 39 36 30 30 33 33 30 22 2c 22 73 74 6f 72 |639600330","stor|
+|000001a0| 65 53 69 7a 65 22 3a 22 73 74 6f 72 65 53 69 7a |eSize":"storeSiz|
+|000001b0| 65 5f 75 73 65 72 73 2d 32 2e 30 2e 30 2d 75 73 |e_users-2.0.0-us|
+|000001c0| 2d 31 34 38 35 36 33 39 36 30 30 33 33 30 22 2c |-1485639600330",|
+|000001d0| 22 70 72 69 53 74 6f 72 65 53 69 7a 65 22 3a 22 |"priStoreSize":"|
+|000001e0| 70 72 69 53 74 6f 72 65 53 69 7a 65 5f 75 73 65 |priStoreSize_use|
+|000001f0| 72 73 2d 32 2e 30 2e 30 2d 75 73 2d 31 34 38 35 |rs-2.0.0-us-1485|
+|00000200| 36 33 39 36 30 30 33 33 30 22 2c 22 63 72 65 61 |639600330","crea|
+|00000210| 74 69 6f 6e 44 61 74 65 22 3a 22 32 30 31 37 2d |tionDate":"2017-|
+|00000220| 30 31 2d 32 38 54 32 31 3a 34 30 3a 30 30 2e 33 |01-28T21:40:00.3|
+|00000230| 33 22 2c 22 61 67 65 22 3a 22 31 30 33 33 37 3a |3","age":"10337:|
+|00000240| 31 39 3a 35 39 22 2c 22 73 6f 6d 65 50 72 6f 70 |19:59","someProp|
+|00000250| 22 3a 22 73 6f 6d 65 50 72 6f 70 5f 75 73 65 72 |":"someProp_user|
+|00000260| 73 2d 32 2e 30 2e 30 2d 75 73 2d 31 34 38 35 36 |s-2.0.0-us-14856|
+|00000270| 33 39 36 30 30 33 33 30 22 7d 2c 22 69 6e 64 65 |39600330"},"inde|
+|00000280| 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 |x_3-2.0.0-us-151|
+|00000290| 35 36 34 35 36 30 30 30 33 30 22 3a 7b 22 68 65 |5645600030":{"he|
+|000002a0| 61 6c 74 68 22 3a 22 4f 4b 5f 69 6e 64 65 78 5f |alth":"OK_index_|
+|000002b0| 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 |3-2.0.0-us-15156|
+|000002c0| 34 35 36 30 30 30 33 30 22 2c 22 70 72 69 22 3a |45600030","pri":|
+|000002d0| 22 70 72 69 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 |"pri_index_3-2.0|
+|000002e0| 2e 30 2d 75 73 2d 31 35 31 35 36 34 35 36 30 30 |.0-us-1515645600|
+|000002f0| 30 33 30 22 2c 22 72 65 70 22 3a 22 72 65 70 5f |030","rep":"rep_|
+|00000300| 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 |index_3-2.0.0-us|
+|00000310| 2d 31 35 31 35 36 34 35 36 30 30 30 33 30 22 2c |-1515645600030",|
+|00000320| 22 64 6f 63 73 43 6f 75 6e 74 22 3a 22 64 6f 63 |"docsCount":"doc|
+|00000330| 73 43 6f 75 6e 74 5f 69 6e 64 65 78 5f 33 2d 32 |sCount_index_3-2|
+|00000340| 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 34 35 36 |.0.0-us-15156456|
+|00000350| 30 30 30 33 30 22 2c 22 64 6f 63 73 44 65 6c 65 |00030","docsDele|
+|00000360| 74 65 64 22 3a 22 64 65 6c 65 74 65 64 5f 69 6e |ted":"deleted_in|
+|00000370| 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 |dex_3-2.0.0-us-1|
+|00000380| 35 31 35 36 34 35 36 30 30 30 33 30 22 2c 22 73 |515645600030","s|
+|00000390| 74 6f 72 65 53 69 7a 65 22 3a 22 73 74 6f 72 65 |toreSize":"store|
+|000003a0| 53 69 7a 65 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 |Size_index_3-2.0|
+|000003b0| 2e 30 2d 75 73 2d 31 35 31 35 36 34 35 36 30 30 |.0-us-1515645600|
+|000003c0| 30 33 30 22 2c 22 70 72 69 53 74 6f 72 65 53 69 |030","priStoreSi|
+|000003d0| 7a 65 22 3a 22 70 72 69 53 74 6f 72 65 53 69 7a |ze":"priStoreSiz|
+|000003e0| 65 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d |e_index_3-2.0.0-|
+|000003f0| 75 73 2d 31 35 31 35 36 34 35 36 30 30 30 33 30 |us-1515645600030|
+|00000400| 22 2c 22 63 72 65 61 74 69 6f 6e 44 61 74 65 22 |","creationDate"|
+|00000410| 3a 22 32 30 31 38 2d 30 31 2d 31 31 54 30 34 3a |:"2018-01-11T04:|
+|00000420| 34 30 3a 30 30 2e 30 33 22 2c 22 61 67 65 22 3a |40:00.03","age":|
+|00000430| 22 32 30 30 32 3a 31 39 3a 35 39 22 2c 22 73 6f |"2002:19:59","so|
+|00000440| 6d 65 50 72 6f 70 22 3a 22 73 6f 6d 65 50 72 6f |meProp":"somePro|
+|00000450| 70 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d |p_index_3-2.0.0-|
+|00000460| 75 73 2d 31 35 31 35 36 34 35 36 30 30 30 33 30 |us-1515645600030|
+|00000470| 22 7d 2c 22 69 6e 64 65 78 5f 33 2d 32 2e 30 2e |"},"index_3-2.0.|
+|00000480| 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 |0-us-15156396000|
+|00000490| 33 30 22 3a 7b 22 68 65 61 6c 74 68 22 3a 22 4f |30":{"health":"O|
+|000004a0| 4b 5f 69 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d |K_index_3-2.0.0-|
+|000004b0| 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 30 |us-1515639600030|
+|000004c0| 22 2c 22 70 72 69 22 3a 22 70 72 69 5f 69 6e 64 |","pri":"pri_ind|
+|000004d0| 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 |ex_3-2.0.0-us-15|
+|000004e0| 31 35 36 33 39 36 30 30 30 33 30 22 2c 22 72 65 |15639600030","re|
+|000004f0| 70 22 3a 22 72 65 70 5f 69 6e 64 65 78 5f 33 2d |p":"rep_index_3-|
+|00000500| 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 |2.0.0-us-1515639|
+|00000510| 36 30 30 30 33 30 22 2c 22 64 6f 63 73 43 6f 75 |600030","docsCou|
+|00000520| 6e 74 22 3a 22 64 6f 63 73 43 6f 75 6e 74 5f 69 |nt":"docsCount_i|
+|00000530| 6e 64 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d |ndex_3-2.0.0-us-|
+|00000540| 31 35 31 35 36 33 39 36 30 30 30 33 30 22 2c 22 |1515639600030","|
+|00000550| 64 6f 63 73 44 65 6c 65 74 65 64 22 3a 22 64 65 |docsDeleted":"de|
+|00000560| 6c 65 74 65 64 5f 69 6e 64 65 78 5f 33 2d 32 2e |leted_index_3-2.|
+|00000570| 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 |0.0-us-151563960|
+|00000580| 30 30 33 30 22 2c 22 73 74 6f 72 65 53 69 7a 65 |0030","storeSize|
+|00000590| 22 3a 22 73 74 6f 72 65 53 69 7a 65 5f 69 6e 64 |":"storeSize_ind|
+|000005a0| 65 78 5f 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 |ex_3-2.0.0-us-15|
+|000005b0| 31 35 36 33 39 36 30 30 30 33 30 22 2c 22 70 72 |15639600030","pr|
+|000005c0| 69 53 74 6f 72 65 53 69 7a 65 22 3a 22 70 72 69 |iStoreSize":"pri|
+|000005d0| 53 74 6f 72 65 53 69 7a 65 5f 69 6e 64 65 78 5f |StoreSize_index_|
+|000005e0| 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 |3-2.0.0-us-15156|
+|000005f0| 33 39 36 30 30 30 33 30 22 2c 22 63 72 65 61 74 |39600030","creat|
+|00000600| 69 6f 6e 44 61 74 65 22 3a 22 32 30 31 38 2d 30 |ionDate":"2018-0|
+|00000610| 31 2d 31 31 54 30 33 3a 30 30 3a 30 30 2e 30 33 |1-11T03:00:00.03|
+|00000620| 22 2c 22 61 67 65 22 3a 22 32 30 30 33 3a 35 39 |","age":"2003:59|
+|00000630| 3a 35 39 22 2c 22 73 6f 6d 65 50 72 6f 70 22 3a |:59","someProp":|
+|00000640| 22 73 6f 6d 65 50 72 6f 70 5f 69 6e 64 65 78 5f |"someProp_index_|
+|00000650| 33 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 |3-2.0.0-us-15156|
+|00000660| 33 39 36 30 30 30 33 30 22 7d 2c 22 69 6e 64 65 |39600030"},"inde|
+|00000670| 78 5f 32 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 |x_2-2.0.0-us-151|
+|00000680| 35 36 33 39 36 30 30 30 33 30 22 3a 7b 22 68 65 |5639600030":{"he|
+|00000690| 61 6c 74 68 22 3a 22 4f 4b 5f 69 6e 64 65 78 5f |alth":"OK_index_|
+|000006a0| 32 2d 32 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 |2-2.0.0-us-15156|
+|000006b0| 33 39 36 30 30 30 33 30 22 2c 22 70 72 69 22 3a |39600030","pri":|
+|000006c0| 22 70 72 69 5f 69 6e 64 65 78 5f 32 2d 32 2e 30 |"pri_index_2-2.0|
+|000006d0| 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 30 |.0-us-1515639600|
+|000006e0| 30 33 30 22 2c 22 72 65 70 22 3a 22 72 65 70 5f |030","rep":"rep_|
+|000006f0| 69 6e 64 65 78 5f 32 2d 32 2e 30 2e 30 2d 75 73 |index_2-2.0.0-us|
+|00000700| 2d 31 35 31 35 36 33 39 36 30 30 30 33 30 22 2c |-1515639600030",|
+|00000710| 22 64 6f 63 73 43 6f 75 6e 74 22 3a 22 64 6f 63 |"docsCount":"doc|
+|00000720| 73 43 6f 75 6e 74 5f 69 6e 64 65 78 5f 32 2d 32 |sCount_index_2-2|
+|00000730| 2e 30 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 |.0.0-us-15156396|
+|00000740| 30 30 30 33 30 22 2c 22 64 6f 63 73 44 65 6c 65 |00030","docsDele|
+|00000750| 74 65 64 22 3a 22 64 65 6c 65 74 65 64 5f 69 6e |ted":"deleted_in|
+|00000760| 64 65 78 5f 32 2d 32 2e 30 2e 30 2d 75 73 2d 31 |dex_2-2.0.0-us-1|
+|00000770| 35 31 35 36 33 39 36 30 30 30 33 30 22 2c 22 73 |515639600030","s|
+|00000780| 74 6f 72 65 53 69 7a 65 22 3a 22 73 74 6f 72 65 |toreSize":"store|
+|00000790| 53 69 7a 65 5f 69 6e 64 65 78 5f 32 2d 32 2e 30 |Size_index_2-2.0|
+|000007a0| 2e 30 2d 75 73 2d 31 35 31 35 36 33 39 36 30 30 |.0-us-1515639600|
+|000007b0| 30 33 30 22 2c 22 70 72 69 53 74 6f 72 65 53 69 |030","priStoreSi|
+|000007c0| 7a 65 22 3a 22 70 72 69 53 74 6f 72 65 53 69 7a |ze":"priStoreSiz|
+|000007d0| 65 5f 69 6e 64 65 78 5f 32 2d 32 2e 30 2e 30 2d |e_index_2-2.0.0-|
+|000007e0| 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 30 |us-1515639600030|
+|000007f0| 22 2c 22 63 72 65 61 74 69 6f 6e 44 61 74 65 22 |","creationDate"|
+|00000800| 3a 22 32 30 31 38 2d 30 31 2d 31 31 54 30 33 3a |:"2018-01-11T03:|
+|00000810| 30 30 3a 30 30 2e 30 33 22 2c 22 61 67 65 22 3a |00:00.03","age":|
+|00000820| 22 32 30 30 33 3a 35 39 3a 35 39 22 2c 22 73 6f |"2003:59:59","so|
+|00000830| 6d 65 50 72 6f 70 22 3a 22 73 6f 6d 65 50 72 6f |meProp":"somePro|
+|00000840| 70 5f 69 6e 64 65 78 5f 32 2d 32 2e 30 2e 30 2d |p_index_2-2.0.0-|
+|00000850| 75 73 2d 31 35 31 35 36 33 39 36 30 30 30 33 30 |us-1515639600030|
+|00000860| 22 7d 2c 22 70 72 6f 70 65 72 74 69 65 73 2d 32 |"},"properties-2|
+|00000870| 2e 30 2e 30 2d 75 73 2d 31 34 35 33 36 33 39 38 |.0.0-us-14536398|
+|00000880| 30 30 30 39 30 22 3a 7b 22 68 65 61 6c 74 68 22 |00090":{"health"|
+|00000890| 3a 22 4f 4b 5f 70 72 6f 70 65 72 74 69 65 73 2d |:"OK_properties-|
+|000008a0| 32 2e 30 2e 30 2d 75 73 2d 31 34 35 33 36 33 39 |2.0.0-us-1453639|
+|000008b0| 38 30 30 30 39 30 22 2c 22 70 72 69 22 3a 22 70 |800090","pri":"p|
+|000008c0| 72 69 5f 70 72 6f 70 65 72 74 69 65 73 2d 32 2e |ri_properties-2.|
+|000008d0| 30 2e 30 2d 75 73 2d 31 34 35 33 36 33 39 38 30 |0.0-us-145363980|
+|000008e0| 30 30 39 30 22 2c 22 72 65 70 22 3a 22 72 65 70 |0090","rep":"rep|
+|000008f0| 5f 70 72 6f 70 65 72 74 69 65 73 2d 32 2e 30 2e |_properties-2.0.|
+|00000900| 30 2d 75 73 2d 31 34 35 33 36 33 39 38 30 30 30 |0-us-14536398000|
+|00000910| 39 30 22 2c 22 64 6f 63 73 43 6f 75 6e 74 22 3a |90","docsCount":|
+|00000920| 22 64 6f 63 73 43 6f 75 6e 74 5f 70 72 6f 70 65 |"docsCount_prope|
+|00000930| 72 74 69 65 73 2d 32 2e 30 2e 30 2d 75 73 2d 31 |rties-2.0.0-us-1|
+|00000940| 34 35 33 36 33 39 38 30 30 30 39 30 22 2c 22 64 |453639800090","d|
+|00000950| 6f 63 73 44 65 6c 65 74 65 64 22 3a 22 64 65 6c |ocsDeleted":"del|
+|00000960| 65 74 65 64 5f 70 72 6f 70 65 72 74 69 65 73 2d |eted_properties-|
+|00000970| 32 2e 30 2e 30 2d 75 73 2d 31 34 35 33 36 33 39 |2.0.0-us-1453639|
+|00000980| 38 30 30 30 39 30 22 2c 22 73 74 6f 72 65 53 69 |800090","storeSi|
+|00000990| 7a 65 22 3a 22 73 74 6f 72 65 53 69 7a 65 5f 70 |ze":"storeSize_p|
+|000009a0| 72 6f 70 65 72 74 69 65 73 2d 32 2e 30 2e 30 2d |roperties-2.0.0-|
+|000009b0| 75 73 2d 31 34 35 33 36 33 39 38 30 30 30 39 30 |us-1453639800090|
+|000009c0| 22 2c 22 70 72 69 53 74 6f 72 65 53 69 7a 65 22 |","priStoreSize"|
+|000009d0| 3a 22 70 72 69 53 74 6f 72 65 53 69 7a 65 5f 70 |:"priStoreSize_p|
+|000009e0| 72 6f 70 65 72 74 69 65 73 2d 32 2e 30 2e 30 2d |roperties-2.0.0-|
+|000009f0| 75 73 2d 31 34 35 33 36 33 39 38 30 30 30 39 30 |us-1453639800090|
+|00000a00| 22 2c 22 63 72 65 61 74 69 6f 6e 44 61 74 65 22 |","creationDate"|
+|00000a10| 3a 22 32 30 31 36 2d 30 31 2d 32 34 54 31 32 3a |:"2016-01-24T12:|
+|00000a20| 35 30 3a 30 30 2e 30 39 22 2c 22 61 67 65 22 3a |50:00.09","age":|
+|00000a30| 22 31 39 32 32 36 3a 30 39 3a 35 39 22 2c 22 73 |"19226:09:59","s|
+|00000a40| 6f 6d 65 50 72 6f 70 22 3a 22 73 6f 6d 65 50 72 |omeProp":"somePr|
+|00000a50| 6f 70 5f 70 72 6f 70 65 72 74 69 65 73 2d 32 2e |op_properties-2.|
+|00000a60| 30 2e 30 2d 75 73 2d 31 34 35 33 36 33 39 38 30 |0.0-us-145363980|
+|00000a70| 30 30 39 30 22 7d 7d 0d 0a                      |0090"}}..       |
++--------+-------------------------------------------------+----------------+
+16:04:49.647 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ COMPLETE
+16:04:49.653 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : RECEIVED -> REQUESTED
+16:04:49.654 [ctor-http-nio-4] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : REQUESTED -> COMPLETED
+16:04:49.654 [ctor-http-nio-4] TRACE 18873 --- o.s.h.s.r.WriteResultPublisher           : SUBSCRIBED publishComplete
+16:04:49.656 [ctor-http-nio-4] DEBUG 18873 --- o.s.h.s.r.ServletHttpHandlerAdapter      : Handling completed with success
+16:04:49.657 [o-auto-3-exec-6] TRACE 18873 --- etServerHttpRequest$RequestBodyPublisher : I/O event onAllDataRead
+16:04:49.657 [o-auto-3-exec-6] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : Received request to cancel
+16:04:49.657 [o-auto-3-exec-6] TRACE 18873 --- rHttpResponse$ResponseBodyFlushProcessor : Received onComplete
+16:04:49.658 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ: 5B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 30 0d 0a 0d 0a                                  |0....           |
++--------+-------------------------------------------------+----------------+
+16:04:49.658 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClientOperations           : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Received last HTTP packet
+16:04:49.659 [ctor-http-nio-1] TRACE 18873 --- r.i.n.c.ChannelOperations                : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Disposing ChannelOperation from a channel
+java.lang.Exception: ChannelOperation terminal stack
+	at reactor.ipc.netty.channel.ChannelOperations.onHandlerTerminate(ChannelOperations.java:417) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at reactor.ipc.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:597) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at reactor.ipc.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:134) [reactor-netty-0.7.6.RELEASE.jar:0.7.6.RELEASE]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284) [netty-codec-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.handler.logging.LoggingHandler.channelRead(LoggingHandler.java:241) [netty-handler-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) [netty-transport-4.1.23.Final.jar:4.1.23.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886) [netty-common-4.1.23.Final.jar:4.1.23.Final]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_101]
+16:04:49.661 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] USER_EVENT: [Handler Terminated]
+16:04:49.661 [ctor-http-nio-1] TRACE 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] End of the pipeline, User event [Handler Terminated]
+16:04:49.661 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Disposing context reactor.ipc.netty.channel.PooledClientContextHandler@b54394a
+16:04:49.661 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Releasing channel: [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081]
+16:04:49.661 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Released [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081], now 0 active connections
+16:04:49.661 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] READ COMPLETE
+16:04:49.657 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] USER_EVENT: [Handler Terminated]
+16:04:49.662 [ctor-http-nio-4] TRACE 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] End of the pipeline, User event [Handler Terminated]
+16:04:49.663 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Disposing context reactor.ipc.netty.channel.PooledClientContextHandler@6df00a05
+16:04:49.663 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Releasing channel: [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479]
+16:04:49.664 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Released [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479], now 0 active connections
+16:04:49.664 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ COMPLETE
+16:04:49.775 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.FluxReceive                      : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Subscribing inbound receiver [pending: 2, cancelled:false, inboundDone: true]
+16:04:49.826 [           main] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Subscriber present
+16:04:49.827 [           main] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Demand signaled
+16:04:49.828 [ctor-http-nio-3] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Acquired [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081], now 1 active connections
+16:04:49.828 [           main] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquiring existing channel from pool: DefaultPromise@3f6f26cb(success: [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081]) SimpleChannelPool{activeConnections=1}
+16:04:49.836 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquired active channel: [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081]
+16:04:49.837 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.ChannelOperations                : [HttpClient] [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] handler is being applied: HttpClientHandler{startURI=http://localhost:48081/search-indexer-api/v1/actuator/indices/configured, method=GET, handler=reactor.ipc.netty.http.client.HttpClient$$Lambda$658/1880901678@687cb6da}
+16:04:49.837 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Writing object DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)

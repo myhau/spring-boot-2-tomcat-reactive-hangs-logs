@@ -1,0 +1,141 @@
+GET /search-indexer-api/v1/actuator/indices/configured HTTP/1.1
+user-agent: ReactorNetty/0.7.6.RELEASE
+host: localhost:48081
+accept: */*
+accept-encoding: gzip
+WebTestClient-Request-Id: 49
+16:04:49.837 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] WRITE: 196B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 47 45 54 20 2f 73 65 61 72 63 68 2d 69 6e 64 65 |GET /search-inde|
+|00000010| 78 65 72 2d 61 70 69 2f 76 31 2f 61 63 74 75 61 |xer-api/v1/actua|
+|00000020| 74 6f 72 2f 69 6e 64 69 63 65 73 2f 63 6f 6e 66 |tor/indices/conf|
+|00000030| 69 67 75 72 65 64 20 48 54 54 50 2f 31 2e 31 0d |igured HTTP/1.1.|
+|00000040| 0a 75 73 65 72 2d 61 67 65 6e 74 3a 20 52 65 61 |.user-agent: Rea|
+|00000050| 63 74 6f 72 4e 65 74 74 79 2f 30 2e 37 2e 36 2e |ctorNetty/0.7.6.|
+|00000060| 52 45 4c 45 41 53 45 0d 0a 68 6f 73 74 3a 20 6c |RELEASE..host: l|
+|00000070| 6f 63 61 6c 68 6f 73 74 3a 34 38 30 38 31 0d 0a |ocalhost:48081..|
+|00000080| 61 63 63 65 70 74 3a 20 2a 2f 2a 0d 0a 61 63 63 |accept: */*..acc|
+|00000090| 65 70 74 2d 65 6e 63 6f 64 69 6e 67 3a 20 67 7a |ept-encoding: gz|
+|000000a0| 69 70 0d 0a 57 65 62 54 65 73 74 43 6c 69 65 6e |ip..WebTestClien|
+|000000b0| 74 2d 52 65 71 75 65 73 74 2d 49 64 3a 20 34 39 |t-Request-Id: 49|
+|000000c0| 0d 0a 0d 0a                                     |....            |
++--------+-------------------------------------------------+----------------+
+16:04:49.838 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] FLUSH
+16:04:49.838 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] Writing object EmptyLastHttpContent
+16:04:49.838 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] WRITE: 0B
+16:04:49.838 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] FLUSH
+16:04:49.841 [o-auto-3-exec-7] DEBUG 18873 --- o.s.w.r.DispatcherHandler                : Processing GET request for [http://localhost:48081/search-indexer-api/v1/actuator/indices/configured]
+16:04:49.843 [o-auto-3-exec-7] TRACE 18873 --- o.s.w.r.r.m.InvocableHandlerMethod       : Invoking 'org.springframework.boot.actuate.endpoint.web.reactive.AbstractWebFluxEndpointHandlerMapping$ReadOperationHandler.handle' with arguments [org.springframework.web.server.adapter.DefaultServerWebExchange@3cc7aa08]
+16:04:49.843 [o-auto-3-exec-7] TRACE 18873 --- o.s.w.r.r.m.InvocableHandlerMethod       : Method [org.springframework.boot.actuate.endpoint.web.reactive.AbstractWebFluxEndpointHandlerMapping$ReadOperationHandler.handle] returned [MonoFlatMap]
+16:04:49.844 [o-auto-3-exec-7] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Subscriber present
+16:04:49.845 [o-auto-3-exec-7] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Demand signaled
+16:04:49.845 [o-auto-3-exec-7] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquiring existing channel from pool: DefaultPromise@120aecdf(incomplete) SimpleChannelPool{activeConnections=0}
+16:04:49.845 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Acquired [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479], now 1 active connections
+16:04:49.845 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquired active channel: [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479]
+16:04:49.846 [o-auto-3-exec-7] TRACE 18873 --- etServerHttpRequest$RequestBodyPublisher : I/O event onAllDataRead
+16:04:49.846 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperations                : [HttpClient] [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] handler is being applied: HttpClientHandler{startURI=http://localhost:46479/_cat/indices, method=GET, handler=reactor.ipc.netty.http.client.HttpClient$$Lambda$658/1880901678@41049724}
+16:04:49.846 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Writing object DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+GET /_cat/indices HTTP/1.1
+user-agent: ReactorNetty/0.7.6.RELEASE
+host: localhost:46479
+accept-encoding: gzip
+Accept: application/json
+Content-Type: application/json
+16:04:49.847 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] WRITE: 174B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 47 45 54 20 2f 5f 63 61 74 2f 69 6e 64 69 63 65 |GET /_cat/indice|
+|00000010| 73 20 48 54 54 50 2f 31 2e 31 0d 0a 75 73 65 72 |s HTTP/1.1..user|
+|00000020| 2d 61 67 65 6e 74 3a 20 52 65 61 63 74 6f 72 4e |-agent: ReactorN|
+|00000030| 65 74 74 79 2f 30 2e 37 2e 36 2e 52 45 4c 45 41 |etty/0.7.6.RELEA|
+|00000040| 53 45 0d 0a 68 6f 73 74 3a 20 6c 6f 63 61 6c 68 |SE..host: localh|
+|00000050| 6f 73 74 3a 34 36 34 37 39 0d 0a 61 63 63 65 70 |ost:46479..accep|
+|00000060| 74 2d 65 6e 63 6f 64 69 6e 67 3a 20 67 7a 69 70 |t-encoding: gzip|
+|00000070| 0d 0a 41 63 63 65 70 74 3a 20 61 70 70 6c 69 63 |..Accept: applic|
+|00000080| 61 74 69 6f 6e 2f 6a 73 6f 6e 0d 0a 43 6f 6e 74 |ation/json..Cont|
+|00000090| 65 6e 74 2d 54 79 70 65 3a 20 61 70 70 6c 69 63 |ent-Type: applic|
+|000000a0| 61 74 69 6f 6e 2f 6a 73 6f 6e 0d 0a 0d 0a       |ation/json....  |
++--------+-------------------------------------------------+----------------+
+16:04:49.847 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] FLUSH
+16:04:49.847 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Writing object EmptyLastHttpContent
+16:04:49.847 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] WRITE: 0B
+16:04:49.847 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] FLUSH
+16:04:49.852 [p1567791862-129]  INFO 18873 --- WireMock                                 : Request received:
+127.0.0.1 - GET /_cat/indices
+
+User-Agent: [ReactorNetty/0.7.6.RELEASE]
+Host: [localhost:46479]
+Accept-Encoding: [gzip]
+Accept: [application/json]
+Content-Type: [application/json]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "[{\"health\":\"OK_index_1-2.0.0-us-1515639600030\",\"index\":\"index_1-2.0.0-us-1515639600030\",\"pri\":\"pri_index_1-2.0.0-us-1515639600030\",\"rep\":\"rep_index_1-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_1-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_1-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_1-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_1-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_1-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_2-2.0.0-us-1515639600030\",\"index\":\"index_2-2.0.0-us-1515639600030\",\"pri\":\"pri_index_2-2.0.0-us-1515639600030\",\"rep\":\"rep_index_2-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_2-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_2-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_2-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_2-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_2-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515639600030\",\"index\":\"index_3-2.0.0-us-1515639600030\",\"pri\":\"pri_index_3-2.0.0-us-1515639600030\",\"rep\":\"rep_index_3-2.0.0-us-1515639600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515639600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515639600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515639600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515639600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515639600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515645600030\",\"index\":\"index_3-2.0.0-us-1515645600030\",\"pri\":\"pri_index_3-2.0.0-us-1515645600030\",\"rep\":\"rep_index_3-2.0.0-us-1515645600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515645600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515645600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515645600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515645600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515645600030\"},{\"health\":\"OK_index_3-2.0.0-us-1515712600030\",\"index\":\"index_3-2.0.0-us-1515712600030\",\"pri\":\"pri_index_3-2.0.0-us-1515712600030\",\"rep\":\"rep_index_3-2.0.0-us-1515712600030\",\"docs.count\":\"docsCount_index_3-2.0.0-us-1515712600030\",\"docs.deleted\":\"deleted_index_3-2.0.0-us-1515712600030\",\"store.size\":\"storeSize_index_3-2.0.0-us-1515712600030\",\"pri.store.size\":\"priStoreSize_index_3-2.0.0-us-1515712600030\",\"someProp\":\"someProp_index_3-2.0.0-us-1515712600030\"},{\"health\":\"OK_users-2.0.0-us-1485639600330\",\"index\":\"users-2.0.0-us-1485639600330\",\"pri\":\"pri_users-2.0.0-us-1485639600330\",\"rep\":\"rep_users-2.0.0-us-1485639600330\",\"docs.count\":\"docsCount_users-2.0.0-us-1485639600330\",\"docs.deleted\":\"deleted_users-2.0.0-us-1485639600330\",\"store.size\":\"storeSize_users-2.0.0-us-1485639600330\",\"pri.store.size\":\"priStoreSize_users-2.0.0-us-1485639600330\",\"someProp\":\"someProp_users-2.0.0-us-1485639600330\"},{\"health\":\"OK_properties-2.0.0-us-1453639800090\",\"index\":\"properties-2.0.0-us-1453639800090\",\"pri\":\"pri_properties-2.0.0-us-1453639800090\",\"rep\":\"rep_properties-2.0.0-us-1453639800090\",\"docs.count\":\"docsCount_properties-2.0.0-us-1453639800090\",\"docs.deleted\":\"deleted_properties-2.0.0-us-1453639800090\",\"store.size\":\"storeSize_properties-2.0.0-us-1453639800090\",\"pri.store.size\":\"priStoreSize_properties-2.0.0-us-1453639800090\",\"someProp\":\"someProp_properties-2.0.0-us-1453639800090\"}]",
+  "headers" : {
+    "Content-Type" : "application/json;charset=UTF-8"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json;charset=UTF-8]
+
+[{"health":"OK_index_1-2.0.0-us-1515639600030","index":"index_1-2.0.0-us-1515639600030","pri":"pri_index_1-2.0.0-us-1515639600030","rep":"rep_index_1-2.0.0-us-1515639600030","docs.count":"docsCount_index_1-2.0.0-us-1515639600030","docs.deleted":"deleted_index_1-2.0.0-us-1515639600030","store.size":"storeSize_index_1-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_1-2.0.0-us-1515639600030","someProp":"someProp_index_1-2.0.0-us-1515639600030"},{"health":"OK_index_2-2.0.0-us-1515639600030","index":"index_2-2.0.0-us-1515639600030","pri":"pri_index_2-2.0.0-us-1515639600030","rep":"rep_index_2-2.0.0-us-1515639600030","docs.count":"docsCount_index_2-2.0.0-us-1515639600030","docs.deleted":"deleted_index_2-2.0.0-us-1515639600030","store.size":"storeSize_index_2-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_2-2.0.0-us-1515639600030","someProp":"someProp_index_2-2.0.0-us-1515639600030"},{"health":"OK_index_3-2.0.0-us-1515639600030","index":"index_3-2.0.0-us-1515639600030","pri":"pri_index_3-2.0.0-us-1515639600030","rep":"rep_index_3-2.0.0-us-1515639600030","docs.count":"docsCount_index_3-2.0.0-us-1515639600030","docs.deleted":"deleted_index_3-2.0.0-us-1515639600030","store.size":"storeSize_index_3-2.0.0-us-1515639600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515639600030","someProp":"someProp_index_3-2.0.0-us-1515639600030"},{"health":"OK_index_3-2.0.0-us-1515645600030","index":"index_3-2.0.0-us-1515645600030","pri":"pri_index_3-2.0.0-us-1515645600030","rep":"rep_index_3-2.0.0-us-1515645600030","docs.count":"docsCount_index_3-2.0.0-us-1515645600030","docs.deleted":"deleted_index_3-2.0.0-us-1515645600030","store.size":"storeSize_index_3-2.0.0-us-1515645600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515645600030","someProp":"someProp_index_3-2.0.0-us-1515645600030"},{"health":"OK_index_3-2.0.0-us-1515712600030","index":"index_3-2.0.0-us-1515712600030","pri":"pri_index_3-2.0.0-us-1515712600030","rep":"rep_index_3-2.0.0-us-1515712600030","docs.count":"docsCount_index_3-2.0.0-us-1515712600030","docs.deleted":"deleted_index_3-2.0.0-us-1515712600030","store.size":"storeSize_index_3-2.0.0-us-1515712600030","pri.store.size":"priStoreSize_index_3-2.0.0-us-1515712600030","someProp":"someProp_index_3-2.0.0-us-1515712600030"},{"health":"OK_users-2.0.0-us-1485639600330","index":"users-2.0.0-us-1485639600330","pri":"pri_users-2.0.0-us-1485639600330","rep":"rep_users-2.0.0-us-1485639600330","docs.count":"docsCount_users-2.0.0-us-1485639600330","docs.deleted":"deleted_users-2.0.0-us-1485639600330","store.size":"storeSize_users-2.0.0-us-1485639600330","pri.store.size":"priStoreSize_users-2.0.0-us-1485639600330","someProp":"someProp_users-2.0.0-us-1485639600330"},{"health":"OK_properties-2.0.0-us-1453639800090","index":"properties-2.0.0-us-1453639800090","pri":"pri_properties-2.0.0-us-1453639800090","rep":"rep_properties-2.0.0-us-1453639800090","docs.count":"docsCount_properties-2.0.0-us-1453639800090","docs.deleted":"deleted_properties-2.0.0-us-1453639800090","store.size":"storeSize_properties-2.0.0-us-1453639800090","pri.store.size":"priStoreSize_properties-2.0.0-us-1453639800090","someProp":"someProp_properties-2.0.0-us-1453639800090"}]
+
+16:04:49.854 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ: 188B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 48 54 54 50 2f 31 2e 31 20 32 30 30 20 4f 4b 0d |HTTP/1.1 200 OK.|
+|00000010| 0a 43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 61 |.Content-Type: a|
+|00000020| 70 70 6c 69 63 61 74 69 6f 6e 2f 6a 73 6f 6e 3b |pplication/json;|
+|00000030| 63 68 61 72 73 65 74 3d 55 54 46 2d 38 0d 0a 43 |charset=UTF-8..C|
+|00000040| 6f 6e 74 65 6e 74 2d 45 6e 63 6f 64 69 6e 67 3a |ontent-Encoding:|
+|00000050| 20 67 7a 69 70 0d 0a 56 61 72 79 3a 20 41 63 63 | gzip..Vary: Acc|
+|00000060| 65 70 74 2d 45 6e 63 6f 64 69 6e 67 2c 20 55 73 |ept-Encoding, Us|
+|00000070| 65 72 2d 41 67 65 6e 74 0d 0a 54 72 61 6e 73 66 |er-Agent..Transf|
+|00000080| 65 72 2d 45 6e 63 6f 64 69 6e 67 3a 20 63 68 75 |er-Encoding: chu|
+|00000090| 6e 6b 65 64 0d 0a 53 65 72 76 65 72 3a 20 4a 65 |nked..Server: Je|
+|000000a0| 74 74 79 28 39 2e 32 2e 32 32 2e 76 32 30 31 37 |tty(9.2.22.v2017|
+|000000b0| 30 36 30 36 29 0d 0a 0d 0a 41 0d 0a             |0606)....A..    |
++--------+-------------------------------------------------+----------------+
+16:04:49.855 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClientOperations           : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Received response (auto-read:false) : [Content-Type=application/json;charset=UTF-8, Vary=Accept-Encoding, User-Agent, Transfer-Encoding=chunked, Server=Jetty(9.2.22.v20170606)]
+16:04:49.855 [ctor-http-nio-4] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Response received, status: 200 OK
+16:04:49.855 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.c.FluxReceive                      : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+16:04:49.856 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ COMPLETE
+16:04:49.857 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ: 10B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| 1f 8b 08 00 00 00 00 00 00 00                   |..........      |
++--------+-------------------------------------------------+----------------+
+16:04:49.858 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xe23ca034, L:/127.0.0.1:38007 - R:localhost/127.0.0.1:46479] READ COMPLETE
+16:04:50.296 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xda5b9875, L:/127.0.0.1:48460 - R:localhost/127.0.0.1:45764] READ COMPLETE
+16:04:50.304 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xda5b9875, L:/127.0.0.1:48460 ! R:localhost/127.0.0.1:45764] CLOSE
+16:04:50.304 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xda5b9875, L:/127.0.0.1:48460 ! R:localhost/127.0.0.1:45764] INACTIVE
+16:04:50.305 [ctor-http-nio-4] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xda5b9875, L:/127.0.0.1:48460 ! R:localhost/127.0.0.1:45764] UNREGISTERED
+16:04:55.343 [           main] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Cancelling request
+16:04:55.344 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 - R:localhost/127.0.0.1:48081] CLOSE
+16:04:55.351 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Released [id: 0x6b1f543e, L:/127.0.0.1:41273 ! R:localhost/127.0.0.1:48081], now 0 active connections
+16:04:55.351 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 ! R:localhost/127.0.0.1:48081] INACTIVE
+16:04:55.352 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0x6b1f543e, L:/127.0.0.1:41273 ! R:localhost/127.0.0.1:48081] UNREGISTERED
+16:04:55.392 [           main] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Subscriber present
+16:04:55.392 [           main] DEBUG 18873 --- o.s.w.r.f.c.ExchangeFunctions            : Demand signaled
+16:04:55.393 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Created new pooled channel [id: 0xdf1d092b], now 0 active connections
+16:04:55.394 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.c.ContextHandler                   : After pipeline DefaultChannelPipeline{(reactor.left.loggingHandler = io.netty.handler.logging.LoggingHandler), (SimpleChannelPool$1#0 = io.netty.channel.pool.SimpleChannelPool$1), (reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.decompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.ipc.netty.channel.ChannelOperationsHandler)}
+16:04:55.394 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xdf1d092b] REGISTERED
+16:04:55.394 [           main] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquiring existing channel from pool: DefaultPromise@3f634608(incomplete) SimpleChannelPool{activeConnections=0}
+16:04:55.394 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xdf1d092b] CONNECT: localhost/127.0.0.1:48081
+16:04:55.394 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.h.c.HttpClient                     : [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081] ACTIVE
+16:04:55.395 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Acquired [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081], now 1 active connections
+16:04:55.395 [ctor-http-nio-1] DEBUG 18873 --- r.i.n.r.DefaultPoolResources             : Registering close event to pool release: [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081]
+16:04:55.395 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.c.PooledClientContextHandler       : Acquired active channel: [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081]
+16:04:55.395 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.c.ChannelOperations                : [HttpClient] [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081] handler is being applied: HttpClientHandler{startURI=http://localhost:48081/search-indexer-api/v1/actuator/indices, method=GET, handler=reactor.ipc.netty.http.client.HttpClient$$Lambda$658/1880901678@73a3fe60}
+16:04:55.396 [ctor-http-nio-2] DEBUG 18873 --- r.i.n.c.ChannelOperationsHandler         : [id: 0xdf1d092b, L:/127.0.0.1:41277 - R:localhost/127.0.0.1:48081] Writing object DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
